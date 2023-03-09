@@ -68,7 +68,7 @@
 
 
 // 768px-1599px
-@media screen and(min-width:768px) {
+@media screen and (min-width:768px) {
     .mobile-menu-btn{
         display: none;
     }
@@ -179,21 +179,14 @@
 .contact-list:focus .contact-list-icon {
     fill: $accent-color;
 }
-
-/*======END HEADER======*/
 }
+/*======END HEADER======*/
 
 
 
 
 
-
-
-
-
-@media screen and(min-width:1600px) {
-
-
+@media screen and (min-width:1600px) {
   .header {   
     padding-top: 25px;
     padding-bottom: 25px;
@@ -276,6 +269,9 @@
     margin-right: 10px;
     fill: $title-text-color;
 }
+.contactlist:not(:last-child) {
+    margin-bottom: 0;
+}
 
 .contact-list {
     display: flex;
@@ -297,5 +293,5 @@
 .contact-list:focus .contact-list-icon {
     fill: $accent-color;
 }
+}
  /*======END HEADER======*/
- }

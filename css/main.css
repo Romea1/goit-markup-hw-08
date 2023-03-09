@@ -67,9 +67,14 @@ img {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
+@media screen and (min-width: 1600px) {
+  .section {
+    padding: 94px 0;
+  }
+}
 .section-team {
   background-color: #f5f4fa;
 }
@@ -221,7 +226,7 @@ img {
     color: #2196F3;
   }
   .nav-list:hover,
-.nav-list:focus {
+  .nav-list:focus {
     color: #2196F3;
   }
   .contact {
@@ -260,15 +265,15 @@ img {
     margin-bottom: 10px;
   }
   .contact-list:hover,
-.contact-list:focus {
+  .contact-list:focus {
     color: #2196F3;
   }
   .contact-list:hover .contact-list-icon,
-.contact-list:focus .contact-list-icon {
+  .contact-list:focus .contact-list-icon {
     fill: #2196F3;
   }
-  /*======END HEADER======*/
 }
+/*======END HEADER======*/
 @media screen and (min-width: 1600px) {
   .header {
     padding-top: 25px;
@@ -338,7 +343,7 @@ img {
     color: #2196F3;
   }
   .nav-list:hover,
-.nav-list:focus {
+  .nav-list:focus {
     color: #2196F3;
   }
   .contact {
@@ -357,6 +362,9 @@ img {
     margin-right: 10px;
     fill: #757575;
   }
+  .contactlist:not(:last-child) {
+    margin-bottom: 0;
+  }
   .contact-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -372,15 +380,15 @@ img {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .contact-list:hover,
-.contact-list:focus {
+  .contact-list:focus {
     color: #2196F3;
   }
   .contact-list:hover .contact-list-icon,
-.contact-list:focus .contact-list-icon {
+  .contact-list:focus .contact-list-icon {
     fill: #2196F3;
   }
-  /*======END HEADER======*/
 }
+/*======END HEADER======*/
 .section-title {
   font-weight: 700;
   font-size: 36px;
@@ -478,17 +486,6 @@ img {
     font-size: 24px;
     line-height: 0.83;
     color: #2196F3;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .logo {
-    font-size: 26px;
-    line-height: 1.19;
-    margin-right: 93px;
-  }
-  .logo-part {
-    font-size: 26px;
-    line-height: 1.19;
   }
 }
 /*SECTION FEATURES*/
@@ -634,6 +631,9 @@ img {
   .work-item {
     display: none;
   }
+  .section-work {
+    display: none;
+  }
   .desc-overlay {
     display: none;
   }
@@ -678,12 +678,7 @@ img {
 }
 /*SECTION TEAM*/
 .team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
+  display: block;
 }
 
 .team {
@@ -692,11 +687,19 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
+.team:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.team-img {
+  width: 100%;
+}
+
 .content-team-wrapper {
   padding-top: 30px;
   border-top: none;
   background: #FFFFFF;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .title-card {
@@ -755,6 +758,37 @@ img {
   fill: #AFB1B8;
 }
 
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    gap: 30px;
+  }
+  .team {
+    width: 354px;
+  }
+  .team:not(:last-child) {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
 /*======Sektion Klients=======*/
 .title-klients {
   font-weight: 700;
@@ -762,14 +796,21 @@ img {
   line-height: 1.16;
   text-align: center;
   color: #212121;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .klient-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   color: #AFB1B8;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: -30px;
+  margin-bottom: -30px;
 }
 .klient-list-link {
   display: -webkit-box;
@@ -783,9 +824,10 @@ img {
           align-items: center;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-  width: 170px;
+  width: 210px;
   height: 92px;
   margin-right: 30px;
+  margin-bottom: 30px;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -801,6 +843,29 @@ img {
   fill: #2196F3;
 }
 
+@media screen and (min-width: 768px) {
+  .klient-list-link {
+    width: 226px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .title-klients {
+    margin-bottom: 50px;
+  }
+  .klient-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .klient-list-link {
+    margin-bottom: 0px;
+    width: 170px;
+    height: 92px;
+  }
+}
 .button-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1135,190 +1200,4 @@ img {
 }
 
 /*=======FOOTER======*/
-/*SECTION CONTACTS*/
-.footer {
-  background-color: #2f303a;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.footer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.footer-logo {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: #FFFFFF;
-}
-
-.adress {
-  margin-top: 20px;
-}
-
-.adress-list {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.adress-contakt {
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.adress-contakt:hover,
-.adress-contakt:focus {
-  color: #2196F3;
-}
-
-.adress-title {
-  color: #FFFFFF;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.adress-title:hover,
-.adress-title:focus {
-  color: #2196F3;
-}
-
-.adress-list-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.adress-contakt {
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 9px;
-}
-
-.social {
-  margin-left: 70px;
-}
-
-.social-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 20px;
-}
-
-.footer-social-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.footer-social-list-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.social-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-list-icon {
-  fill: #FFFFFF;
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: #2196F3;
-}
-
-.social-link:hover .social-list-icon,
-.social-link:focus .social-list-icon {
-  fill: #FFFFFF;
-}
-
-.subscription {
-  margin-left: 93px;
-}
-
-.subscription-form {
-  width: 358px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: #2f303a;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  padding-left: 16px;
-}
-
-.subscription-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.subscription-btn {
-  width: 200px;
-  height: 50px;
-  background: #2196F3;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: #FFFFFF;
-  background-color: #2196F3;
-  cursor: pointer;
-  margin-left: 12px;
-  padding: 10px 20px 10px 28px;
-  border: none;
-}
-
-.subscription-list-icon {
-  fill: #FFFFFF;
-  margin-left: 10px;
-}/*# sourceMappingURL=main.css.map */
+/*SECTION CONTACTS*//*# sourceMappingURL=main.css.map */

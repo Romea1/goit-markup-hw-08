@@ -1,7 +1,7 @@
 /*SECTION TEAM*/
-.team-list {
-    display: flex;
-    column-gap: 30px;
+.team-list{
+    display: block;
+
 }
 
 .team {
@@ -9,11 +9,19 @@
     border-radius: 0px 0px 4px 4px;
 }
 
+.team:not(:last-child)   {
+     margin-bottom: 30px;
+}
+
+.team-img{
+   width: 100%;
+}
+
 .content-team-wrapper {
     padding-top: 30px;
     border-top: none;
     background: #FFFFFF;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
 }
 
 .title-card {
@@ -67,4 +75,32 @@
 
 .team-list-icon {
     fill: #AFB1B8;
+}
+
+
+@media screen and (min-width:768px) {
+    .team-list {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 30px;
+            gap: 30px;
+}
+.team {
+width:354px ;
+}
+.team:not(:last-child) {
+    margin-bottom: 0px;
+}
+
+}
+
+
+@media screen  and (min-width:1600px){
+    .team-list {
+            display: flex;
+            column-gap: 30px;
+            flex-wrap: nowrap;
+        }
+        
+    
 }

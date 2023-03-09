@@ -7,12 +7,16 @@
     text-align: center;
 
     color: $primary-color;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .klient-list {
     display: flex;
+    flex-wrap: wrap;
     color: #AFB1B8;
+    justify-content: center;
+    margin-right: - 30px;
+    margin-bottom: -30px;
 
     &-link {
         display: flex;
@@ -20,9 +24,10 @@
         align-items: center;
         border: 1px solid #AFB1B8;
         border-radius: 4px;
-        width: 170px;
+        width: 210px;
         height: 92px;
         margin-right: 30px;
+        margin-bottom: 30px;
 
         transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -39,6 +44,35 @@
         .klient-list-link:hover &,
         .klient-list-link:focus & {
             fill: $accent-color;
+        }
+    }
+}
+
+
+
+@media screen and (min-width:768px) {
+    .klient-list {
+        &-link {
+            width: 226px;
+            height: 92px;
+        }
+    }
+
+}
+
+@media screen and (min-width:1600px) {
+    .title-klients {
+        margin-bottom: 50px;
+    }
+
+    .klient-list {
+        display: flex;
+        flex-wrap: nowrap;
+
+        &-link {
+            margin-bottom: 0px;
+            width: 170px;
+            height: 92px;
         }
     }
 }
